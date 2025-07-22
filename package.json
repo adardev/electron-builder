@@ -1,0 +1,34 @@
+{
+  "name": "GitHub",
+  "version": "1.0.0",
+  "main": "resources/app/lib/main.js",
+  "description": "GitHub",
+  "author": "GitHub",
+  "scripts": {
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.github.github",
+    "productName": "GitHub",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "resources/**/*",
+      "GitHub.exe"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "resources/app/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^25.7.0",
+    "electron-builder": "^26.0.12"
+  }
+}
